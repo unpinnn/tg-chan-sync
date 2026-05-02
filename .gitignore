@@ -1,0 +1,10 @@
+**/.env
+**/package-lock.json
+**/node_modules
+**/channel-archiv*
+**/.tmp*
+**/.telegram-session.txt
+**/text-rules.json
+**/cache
+**/.x-web-profile
+webext/serv/state.json

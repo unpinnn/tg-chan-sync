@@ -1,0 +1,43 @@
+{
+  "remove-literal": [
+    "----- BEGIN LEGACY FOOTER -----",
+    "----- END LEGACY FOOTER -----"
+  ],
+  "replace-literal": [
+    {
+      "from": "@old_handle",
+      "to": "@new_handle"
+    },
+    {
+      "from": "Old Brand Name",
+      "to": "New Brand Name"
+    }
+  ],
+  "remove-regex": [
+    {
+      "pattern": "^\\s*Sent from my .*?$",
+      "flags": "gmi"
+    },
+    {
+      "pattern": "----- BEGIN LEGACY FOOTER -----[\\s\\S]*?----- END LEGACY FOOTER -----",
+      "flags": "gi"
+    }
+  ],
+  "replace-regex": [
+    {
+      "pattern": "\\r\\n?",
+      "replacement": "\\n",
+      "flags": "g"
+    },
+    {
+      "pattern": "[ \\t]{2,}",
+      "replacement": " ",
+      "flags": "g"
+    },
+    {
+      "pattern": "\\n{3,}",
+      "replacement": "\\n\\n",
+      "flags": "g"
+    }
+  ]
+}

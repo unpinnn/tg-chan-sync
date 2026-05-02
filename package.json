@@ -1,0 +1,29 @@
+{
+  "name": "tg-chan-sync",
+  "description": "Mirror posts from a source Telegram channel into local storage, then post from local state to a destination channel.",
+  "version": "1.0.0",
+  "license": "GPL-3.0-only",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "src2local": "node app/main.js src2local",
+    "local2dest": "node app/main.js local2dest",
+    "local2x": "node app/main.js local2x",
+    "local2x-web": "node app/main.js local2x-web",
+    "local2blogger": "node app/main.js local2blogger",
+    "local2wp.com": "node app/main.js local2wp.com",
+    "local2bsky": "node app/main.js local2bsky",
+    "local2insta": "node app/main.js local2insta",
+    "local2web-static-js": "node app/local2web-static-js.js",
+    "local2x-webext-serv": "node webext/serv/main.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "input": "^1.0.1",
+    "playwright": "^1.54.2",
+    "sql.js": "^1.13.0",
+    "telegram": "^2.26.22",
+    "twitter-api-v2": "^1.26.2"
+  }
+}

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Local2X Webext</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 12px;
+        width: 320px;
+        font: 13px/1.4 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        background: #111;
+        color: #f2f2f2;
+      }
+      h1 {
+        margin: 0 0 10px;
+        font-size: 14px;
+      }
+      label {
+        display: block;
+        margin: 8px 0 4px;
+        font-size: 12px;
+        color: #bbb;
+      }
+      input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 6px 8px;
+        border: 1px solid #333;
+        border-radius: 6px;
+        background: #1b1b1b;
+        color: #f2f2f2;
+      }
+      .row {
+        display: flex;
+        gap: 8px;
+        margin-top: 10px;
+      }
+      button {
+        flex: 1;
+        padding: 8px 10px;
+        border: 1px solid #444;
+        border-radius: 6px;
+        background: #222;
+        color: #fff;
+        cursor: pointer;
+      }
+      button.primary {
+        background: #0057d9;
+        border-color: #0057d9;
+      }
+      #status {
+        margin-top: 10px;
+        font-size: 12px;
+        color: #9ad0ff;
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Local2X Webext</h1>
+    <label for="serverBaseUrl">Server URL</label>
+    <input id="serverBaseUrl" type="text" placeholder="http://127.0.0.1:37891" />
+    <label for="token">Server Token</label>
+    <input id="token" type="password" placeholder="optional token" />
+    <label for="pollMs">Poll ms</label>
+    <input id="pollMs" type="number" min="500" step="100" />
+    <label for="maxTextLength">X split length</label>
+    <input id="maxTextLength" type="number" min="40" max="280" step="1" />
+    <label for="postIntervalMsRange">Post interval range (ms)</label>
+    <input id="postIntervalMsRange" type="text" placeholder="1800-3200" />
+    <div class="row">
+      <button id="save">Save</button>
+      <button id="statusBtn">Status</button>
+    </div>
+    <div class="row">
+      <button id="start" class="primary">Start</button>
+      <button id="stop">Stop</button>
+    </div>
+    <div id="status"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>
